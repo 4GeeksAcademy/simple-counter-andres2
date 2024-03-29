@@ -4,23 +4,33 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+const counter = () => {
+    const [segundos, setSeconds] = useState (0);
+    const [digitos, setDigits] = useState ([0,0,0,0,0,0]);
+
+    useEffect (() => {
+        const interval = setInterval(() => {
+            const digitsArray = seconds.toString().padStart(6,'0').split('');
+                setDigits(digitsAray);
+                setSeconds ((prevSeconds) => prevSeconds +1);
+        }, 1000);
+
+    return () => clearInterval(interval);
+}, [seconds]);
+
+return (
+    <div className='numberedCard'>
+
+        <H5>{digits[0]}</H5>
+        <H5>{digits[0]}</H5>
+        <H5>{digits[0]}</H5>
+        <H5>{digits[0]}</H5>
+        <H5>{digits[0]}</H5>
+        <H5>{digits[0]}</H5>
+
+    </div>
+  );
 };
 
-export default Home;
+
+export default counter;
